@@ -18,32 +18,32 @@ export default function SingleNews() {
         console.log(response.data);
         setLoading(false)
       });
-    }, []);
+    }, [baseUrl]);
 
     return(
-            <div class='container'>
+            <div className='container'>
 
             {isLoading ? <Loading /> :
                 
 
-                <div class="row">
+                <div className="row">
 
                 {news.map(source => (
 
-                <div class='col-md-9 col-sm-12 col-lg-9'>
+                <div className='col-md-9 col-sm-12 col-lg-9'>
 
-                <div class="card card-single-article">
-                <div class="card-body single">
-                    <h2 key={source.title} class="card-title" style={{ textDecoration: 'underline', color: 'black' }}>{source.title}</h2>
-                    <h6 key={source.source.name} class="card-text text-muted">Source : <b>{source.source.name}</b></h6>
+                <div className="card card-single-article">
+                <div className="card-body single">
+                    <h2 key={source.title} className="card-title" style={{ textDecoration: 'underline', color: 'white' }}>{source.title}</h2>
+                    <h6 key={source.source.name} className="card-text text-muted">Source : <b>{source.source.name}</b></h6>
                     <div className="pub-auth">
-                    <p key={source.author} class="card-text"><small class="text-muted">Author : <b>{source.author ? source.author : 'Unknown'}</b></small></p> 
-                    <p key={source.publishedAt} class="card-text"><small class="text-muted">Published On : <b>{source.publishedAt}</b></small></p>
+                    <p key={source.author} className="card-text"><small className="text-muted">Author : <b>{source.author ? source.author : 'Unknown'}</b></small></p> 
+                    <p key={source.publishedAt} className="card-text"><small className="text-muted">Published On : <b>{source.publishedAt}</b></small></p>
                     </div>
-                    <p style={{ color: 'black' }} key={source.description} class="card-text">{source.description}</p>                
+                    <p style={{ color: 'white' }} key={source.description} className="card-text">{source.description}</p>                
                     
                     
-                    <a key={source.url} class="btn btn-outline-success" href={source.url} rel="noopener noreferrer" target='_blank' role="button">View Full Story</a>
+                    <a key={source.url} className="btn btn-outline-success" href={source.url} rel="noopener noreferrer" target='_blank' role="button">View Full Story</a>
                 </div>
                 <img key={source.urlToImage} alt={source.source.name} className="single-article-img" src={source.urlToImage} />
                 </div>

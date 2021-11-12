@@ -5,7 +5,7 @@ export default class Loading extends Component {
         return (
             <div className='loading'>
 
-            <div class="loadingio-spinner-ellipsis-bi8kj48v23f"><div class="ldio-9e0bp26ffmv">
+            <div className="loadingio-spinner-ellipsis-bi8kj48v23f"><div className="ldio-9e0bp26ffmv">
             <div></div><div></div><div></div><div></div><div></div>
             </div></div>
 

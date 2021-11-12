@@ -3,10 +3,14 @@ import { Link } from 'react-router-dom';
 
 const Error = () => {
     return(
-        <div>
-            <h1>Error Page</h1>
-            <Link to="/" className="btn">Back To Home Page</Link>
+        <div
+          className="bg-image d-flex justify-content-center align-items-center">
+
+        <Link to="/" className="btn">
+          <h1 className="error">Home Page</h1>
+          </Link>
         </div>
+            
     );
 };
 

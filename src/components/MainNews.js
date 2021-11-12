@@ -18,12 +18,13 @@ export default function MainNews() {
         setArticles(response.data.sources);
         console.log(process.env);
         setLoading(false)
+        setCategory('general');
       });
-    }, []);
+    }, [baseUrl]);
 
     return(
 
-      <div class='container'>
+      <div className='container'>
 
       {isLoading ? <Loading /> :
 
